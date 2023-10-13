@@ -19,7 +19,7 @@ app.set('trust proxy', 1);
 app.use(
   cors({
     // origin: ["http://localhost:3000", "https://nesconnect.xyz","https://www.nesconnect.tech","https://nesconnect.tech"],
-    origin: [process.env.FE_URL],
+    origin: [process.env.FE_URL.split(',')],
     credentials: true,
     allowedHeaders: [
       'Content-Type',

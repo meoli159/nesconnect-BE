@@ -1,7 +1,7 @@
 exports.socketConnection = (server) => {
   const io = require('socket.io')(server, {
     cors: {
-      origin: [process.env.FE_URL],
+      origin: [process.env.FE_URL.split(',')],
       credentials: true,
     },
     pingInterval: 10000,
